@@ -1,0 +1,599 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
+.inter-heading {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+
+.inter-body-text {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+
+.inter-subheading {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+
+:root {
+  --section-spacing: 3.5rem;
+  --clr-primary-300: 216 87% 60%;
+  --clr-primary-400: 216 87% 40%;
+  --clr-primary-500: 216 87% 20%;
+  --clr-secondary-300: 277 50% 60%;
+  --clr-secondary-400: 277 50% 40%;
+  --clr-secondary-500: 277 50% 20%;
+  --clr-accent-300: 358 72% 70%;
+  --clr-accent-400: 358 72% 53%;
+  --clr-accent-500: 358 72% 30%;
+  --clr-neutral-100: 0 0% 100%;
+  --clr-neutral-200: 0 0% 87%;
+  --clr-neutral-300: 0 0% 80%;
+  --clr-neutral-400: 0 0% 70%;
+  --clr-neutral-500: 0 0% 60%;
+  --clr-neutral-600: 0 0% 50%;
+  --clr-neutral-700: 0 0% 40%;
+  --clr-neutral-800: 0 0% 30%;
+  --clr-neutral-900: 0 0% 15%;
+  --fs-300: 1rem;
+  --fs-400: 1.125rem;
+  --fs-500: 1.563rem;
+  --fs-600: 1.953rem;
+  --fs-700: 2.441rem;
+  --fs-800: 3.052rem;
+}
+@media only screen and (min-width: 65em) {
+  :root {
+    --section-spacing: 7rem;
+  }
+}
+@media only screen and (min-width: 40em) {
+  :root {
+    --fs-300: 1rem;
+    --fs-400: 1.25rem;
+    --fs-500: 2rem;
+    --fs-600: 2.827rem;
+    --fs-700: 4rem;
+    --fs-800: 5.653rem;
+  }
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+body {
+  font-size: var(--fs-400);
+  font-family: serif;
+  color: var(--clr-neutral-900);
+  letter-spacing: -0.5px;
+}
+
+h1, h2, h3, h4 {
+  --font-weight: 700;
+  --font-width: 80;
+  font-weight: normal;
+  font-stretch: 100%;
+  line-height: 1.1;
+  color: var(--clr-neutral-800);
+}
+
+h1 {
+  --font-weight: 900;
+  color: var(--clr, var(--clr-primary-400));
+}
+
+h1,
+.h1 {
+  font-size: --fs-800;
+}
+
+h2,
+.h2 {
+  --flow-spacer: 1.5em;
+  font-size: --fs-700;
+}
+
+h3,
+.h3 {
+  --flow-spacer: 1.5em;
+  font-size: --fs-600;
+}
+
+h4,
+.h4 {
+  font-size: --fs-500;
+}
+
+small,
+.text-small {
+  font-size: var(--fs-300);
+}
+
+strong {
+  --font-weight: 500;
+  font-weight: normal;
+}
+
+a {
+  color: var(--clr-primary-400);
+}
+a:hover, a:focus {
+  color: var(--clr-primary-500);
+  text-decoration: none;
+}
+
+p:not([class]),
+ul:not([class]),
+li:not([class]) {
+  max-width: 60ch;
+}
+
+.text-primary-300 {
+  color: hsl(var(--clr-primary-300)) !important;
+}
+
+.bg-primary-300 {
+  background-color: hsl(var(--clr-primary-300)) !important;
+}
+
+.text-primary-400 {
+  color: hsl(var(--clr-primary-400)) !important;
+}
+
+.bg-primary-400 {
+  background-color: hsl(var(--clr-primary-400)) !important;
+}
+
+.text-primary-500 {
+  color: hsl(var(--clr-primary-500)) !important;
+}
+
+.bg-primary-500 {
+  background-color: hsl(var(--clr-primary-500)) !important;
+}
+
+.text-secondary-300 {
+  color: hsl(var(--clr-secondary-300)) !important;
+}
+
+.bg-secondary-300 {
+  background-color: hsl(var(--clr-secondary-300)) !important;
+}
+
+.text-secondary-400 {
+  color: hsl(var(--clr-secondary-400)) !important;
+}
+
+.bg-secondary-400 {
+  background-color: hsl(var(--clr-secondary-400)) !important;
+}
+
+.text-secondary-500 {
+  color: hsl(var(--clr-secondary-500)) !important;
+}
+
+.bg-secondary-500 {
+  background-color: hsl(var(--clr-secondary-500)) !important;
+}
+
+.text-accent-300 {
+  color: hsl(var(--clr-accent-300)) !important;
+}
+
+.bg-accent-300 {
+  background-color: hsl(var(--clr-accent-300)) !important;
+}
+
+.text-accent-400 {
+  color: hsl(var(--clr-accent-400)) !important;
+}
+
+.bg-accent-400 {
+  background-color: hsl(var(--clr-accent-400)) !important;
+}
+
+.text-accent-500 {
+  color: hsl(var(--clr-accent-500)) !important;
+}
+
+.bg-accent-500 {
+  background-color: hsl(var(--clr-accent-500)) !important;
+}
+
+.text-neutral-100 {
+  color: hsl(var(--clr-neutral-100)) !important;
+}
+
+.bg-neutral-100 {
+  background-color: hsl(var(--clr-neutral-100)) !important;
+}
+
+.text-neutral-200 {
+  color: hsl(var(--clr-neutral-200)) !important;
+}
+
+.bg-neutral-200 {
+  background-color: hsl(var(--clr-neutral-200)) !important;
+}
+
+.text-neutral-300 {
+  color: hsl(var(--clr-neutral-300)) !important;
+}
+
+.bg-neutral-300 {
+  background-color: hsl(var(--clr-neutral-300)) !important;
+}
+
+.text-neutral-400 {
+  color: hsl(var(--clr-neutral-400)) !important;
+}
+
+.bg-neutral-400 {
+  background-color: hsl(var(--clr-neutral-400)) !important;
+}
+
+.text-neutral-500 {
+  color: hsl(var(--clr-neutral-500)) !important;
+}
+
+.bg-neutral-500 {
+  background-color: hsl(var(--clr-neutral-500)) !important;
+}
+
+.text-neutral-600 {
+  color: hsl(var(--clr-neutral-600)) !important;
+}
+
+.bg-neutral-600 {
+  background-color: hsl(var(--clr-neutral-600)) !important;
+}
+
+.text-neutral-700 {
+  color: hsl(var(--clr-neutral-700)) !important;
+}
+
+.bg-neutral-700 {
+  background-color: hsl(var(--clr-neutral-700)) !important;
+}
+
+.text-neutral-800 {
+  color: hsl(var(--clr-neutral-800)) !important;
+}
+
+.bg-neutral-800 {
+  background-color: hsl(var(--clr-neutral-800)) !important;
+}
+
+.text-neutral-900 {
+  color: hsl(var(--clr-neutral-900)) !important;
+}
+
+.bg-neutral-900 {
+  background-color: hsl(var(--clr-neutral-900)) !important;
+}
+
+.primary {
+  --clr: var(--clr-primary-400);
+}
+
+.youtube {
+  --clr: var(--clr-youtube-400);
+}
+
+.article {
+  --clr: var(--clr-article-400);
+}
+
+.course {
+  --clr: var(--clr-course-400);
+}
+
+.resource {
+  --clr: var(--clr-resource-400);
+}
+
+.container {
+  padding: 0 1.5rem;
+  max-width: 62.5rem;
+  margin: 0 auto;
+}
+
+.flow > * + * {
+  margin-top: var(--flow-spacer, 0.75em);
+}
+
+.sr-only {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+}
+
+.screenreader-text {
+  position: absolute;
+  left: -999px;
+  width: 1px;
+  height: 1px;
+  top: auto;
+}
+.screenreader-text:focus {
+  display: inline-block;
+  height: auto;
+  width: auto;
+  position: static;
+  margin: auto;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 4rem 1rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease-in-out;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+.card img {
+  height: 12rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.card .card-details {
+  padding: 1rem;
+}
+.card .card-details .card-title {
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: capitalize;
+  color: #1e293b;
+}
+.card .card-details .card-title a {
+  text-decoration: none;
+  color: #1e293b;
+}
+.card .card-details .card-title a::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+.card .card-details .card-title a:focus-within:focus {
+  box-shadow: none;
+  outline: none;
+}
+.card .card-details .card-information {
+  font-size: 0.75rem;
+  margin: 0.5rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+.card .card-details .card-information .card-date, .card .card-details .card-information .card-view {
+  font-weight: 300;
+  color: #64748b;
+}
+
+.card:focus-within {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.729);
+}
+
+@media (min-width: 0) {
+  .sm\:b-1 {
+    border: 1px solid red;
+  }
+}
+@media (min-width: 768px) {
+  .md\:w-32 {
+    background: white;
+  }
+  .md\:justify-around {
+    justify-content: space-around;
+  }
+  .md\:px-2 {
+    padding: 0 1rem;
+  }
+  .cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .cards .card {
+    flex: 1 1 350px;
+    max-width: 350px;
+  }
+}
+@media (min-width: 1024px) {
+  .cards {
+    padding: 2rem 4rem;
+    gap: 4rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .cards .card {
+    flex: 1 1 300px;
+    max-width: 350px;
+  }
+}
+body {
+  background: #efefef;
+}
+
+.sidebar {
+  margin: 5em;
+  max-width: 18em;
+}
+
+.content-snippets {
+  padding: 2rem;
+  background: white;
+  line-height: 1;
+  list-style: none;
+}
+.content-snippets a {
+  text-decoration: none;
+}
+.content-snippets a:hover,
+.content-snippets a:focus {
+  text-decoration: underline;
+}
+.content-snippets li {
+  border-top: 2px dotted rgba(0, 0, 0, 0.2);
+  padding: 1em 0;
+}
+.content-snippets article {
+  display: grid;
+  gap: 0.5em;
+  grid-template-columns: 100px 1fr;
+}
+.content-snippets h3 {
+  text-transform: uppercase;
+  font-family: sans-serif;
+}
+.content-snippets img {
+  border-radius: 50%;
+  grid-column: 1/2;
+  grid-row: 1/3;
+}
+
+.title-with-border {
+  --left-offset: 1.5em;
+  --offset-top: .5em;
+  position: relative;
+  width: -moz-max-content;
+  width: max-content;
+  margin-bottom: -5em;
+  border: 1px solid hsl(var(--clr-accent-400));
+  border-right: 0;
+  padding: var(--offset-top) var(--left-offset) 5em;
+  font-size: var(--fs-500);
+  line-height: 1;
+  font-style: italic;
+  transform: translateX(calc(-1 * var(--left-offset)));
+}
+
+.title-with-border + * {
+  position: relative;
+  z-index: 2;
+}
+
+.title-with-border::before,
+.title-with-border::after {
+  content: "";
+  position: absolute;
+  background-color: currentColor;
+}
+
+.title-with-border::before {
+  right: 0;
+  top: 0;
+  height: calc(var(--fs-500) / 2 + var(--offset-top));
+  width: 1px;
+}
+
+.title-with-border::after {
+  top: calc(var(--fs-500) / 2 + var(--offset-top));
+  right: 0;
+  width: 0.65em;
+  height: 1px;
+}/*# sourceMappingURL=style.css.map */

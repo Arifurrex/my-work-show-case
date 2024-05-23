@@ -1,0 +1,14 @@
+.flow > * + * {
+  margin-top: var(--flow-spacer, .75em);
+}
+
+//  এর মদ্যমে 1 st element এর margin-top হবে না । 
+
+// .flow: হল  class selector যেটা  targets any element with the class flow.
+
+// >: হল  child combinator. It targets only the direct children of the .flow element.
+
+//  * + *: এটা হল  general sibling combinator ।  combined with the universal selector. Here's what it does:
+      // *: The universal selector, which matches any element.
+      //! +: The adjacent sibling combinator, which selects elements that are immediately preceded by a specified element.
+      // * + *: This means any element that is immediately preceded by another element. মানে হল select করবে any element যেটার আরো একটা element আছে 

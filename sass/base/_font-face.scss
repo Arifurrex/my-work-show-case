@@ -1,0 +1,34 @@
+// @font-face {
+//   font-family: "Alaska";
+//   src: url("../fonts/alaska.ttf") format("truetype");
+//   font-display: swap;
+// }
+
+
+// Import the Google Fonts CSS
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+// Define classes using the imported fonts
+.inter-heading {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+
+.inter-body-text {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+
+.inter-subheading {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
