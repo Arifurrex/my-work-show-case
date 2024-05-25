@@ -188,7 +188,7 @@ const makeHtml= (data)=>{
     return(`<div class="card md:w-32">
     <img src="${data.img}" alt="" class="card-image">
     <div class="card-details proza-libre-medium">
-        <h3 class="card-title inter-body-text"><a href="${data.link}">${data.title}</a></h3>
+        <h3 class="card-title inter-body-text"><a href="${data.link}" loading="lazy">${data.title}</a></h3>
         <div class="card-information">
             <div class="card-date inter-subheading">${data.date}</div>
             <div class="card-view inter-subheading">${data.view}</div>
