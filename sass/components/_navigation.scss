@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.navigation{
+    position: relative;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
+    gap: 2rem;
+    align-items: center;
+    padding: 2rem 0;
+    .overlay{
+        content: '';
+        visibility: hidden;
+        position:fixed;
+        z-index:calc(9996 - 1);
+        top: 0;
+        left: 0;
+        width:110vw;
+        height: 110vh;
+        opacity: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        transition: opacity 0.25s ease-in-out, visibility 0.25s;
+
+    }
+    .navigation-buttonAndLogo{
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+    .humburger{
+        display: grid;
+        grid-template-columns:1fr;
+        gap: 5px;
+        width: 20px;
+        padding: 6px;
+        box-sizing: content-box;
+        order: -10;
+        border:none;
+        background: none;
+        cursor: pointer;
+        span{
+            height: 2px;
+            width: 100%;
+            background-color:black;
+            transform: translate3d(0px, 0px, 0px);
+            transform-origin: 0% 50%;
+            transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1) 0s;
+            border-radius: 1e+07px;
+            cursor: pointer;
+            
+        }
+        :nth-child(3){
+            width: 67%;
+        }
+
+    }
+    a{
+        text-decoration: none;
+    }
+    .nav-list-hidden{
+        display: none;
+    }
+    .nav-list{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        text-transform: capitalize;
+        font-size: 2rem;
+        font-weight: 900;
+        color: var(--);
+        .nav-item{
+            list-style:none;
+            cursor: pointer;
+        }
+    }
+}
+
+.mobile-menu-overlay{
+  visibility: visible;
+  opacity: 1;
+}
+.flex-column{
+    flex-direction: column;
+}
+.humburger-gap-for-child{
+    gap:12px !important;
+}
+.humburger-child-2-hidden{
+    display:none;    
+}
+.rotate-45{
+    transform: rotate(45deg) translate3d(0, 0, 0) !important;
+}
+.rotate-minus-45{
+    width: 100% !important;
+    transform: rotate(-45deg) translate3d(0, 0, 0) !important;
+}
+
+@media(min-width:768px){
+   .navigation{
+    width: 1200px;
+    max-width:906px ;
+    padding:2rem;
+    background-color: white;
+    margin: auto;
+    .navigation-buttonAndLogo{
+       justify-content:flex-start ; 
+    }
+    .humburger{
+        display: none;
+    }
+    .nav-list-hidden{
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        .nav-item{
+            list-style: none;
+        }
+    }
+   }
+}

@@ -1,6 +1,7 @@
 .cards{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap:1rem;
     padding: 4rem 1rem;
     
@@ -95,15 +96,26 @@
   @media(min-width:1024px){
     .cards{
       padding: 2rem 4rem;
-      gap: 4rem;
+      gap: 2rem;
       flex-direction: row;
       flex-wrap: wrap;
       .card{
         flex: 1 1 300px;
-        max-width: 350px;
+        max-width: 450px;
       }
     }
   
   }
   
+  @media(min-width:1440px){
+    .cards{
+      .card{
+        flex: 1 1 550px;
+        max-width: 550px;
+        .card-title{
+          font-size: 1.5rem;
+        }
+      }
+    }
   
+  }
